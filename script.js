@@ -898,6 +898,8 @@ class Game {
   }
   
   awardPoint() {
+    let winsound=new Audio("sounds/win.mp3")
+    winsound.play()
     this.playerScore++;
     this.hasMissed = true;
     this.ball.bounceCount = 0;
@@ -905,6 +907,8 @@ class Game {
   }
 
   removePoint() {
+    let losesound=new Audio("sounds/lose.mp3")
+    losesound.play()
     this.opponentScore++;
     this.hasMissed = true;
     this.ball.bounceCount = 0;
